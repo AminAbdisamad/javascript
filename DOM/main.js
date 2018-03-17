@@ -183,6 +183,8 @@ val = listItems.nextSibling;
 val = listItems.nextElementSibling;
 val = listItems.nextElementSibling.nextElementSibling;
 
-
-
+/* Get Previous Sibling Elements
+------------------*/
+val = listItems.previousSibling;
+val = listItems.previousElementSibling;
 console.log(val);
