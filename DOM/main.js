@@ -17,4 +17,17 @@ val = document.forms[0].action;
 
 val = document.links[0];
 val = document.links[0].className;
+val = document.links[0].classList[0];
+
+
+val = document.scripts;
+val = document.scripts[2].getAttribute('src');
+
+let element = document.body; 
+let scripts = document.scripts
+let scriptArr = Array.from(scripts);
+scriptArr.forEach(function(script){
+    console.log(script);
+});
+
 console.log(val);
