@@ -33,15 +33,54 @@ scriptArr.forEach(function(script){
 //console.log(val);
 
 
-//Selecting HTML Elements 
+//Selecting Single Elements 
 /* getElementById*/
-let taskTitle = document.getElementById('task-title');
-taskTitle.style.background = '#eee';
-taskTitle.style.color = '#333';
-taskTitle.style.padding = '10px';
-//taskTitle.style.display = 'none';
+// let taskTitle = document.getElementById('task-title');
+// taskTitle.style.background = '#eee';
+// taskTitle.style.color = '#333';
+// taskTitle.style.padding = '10px';
+// //taskTitle.style.display = 'none';
 
-//changing content
-taskTitle.textContent = "Task List";
-taskTitle.innerText = "The Task List";
-taskTitle.innerHTML ="<span style='color:blue'>Task List</span>"
+// //changing content
+// taskTitle.textContent = "Task List";
+// taskTitle.innerText = "The Task List";
+// taskTitle.innerHTML ="<span style='color:blue'>Task List</span>"
+
+/* querySelector */
+
+let query = document.querySelector("#task-title");
+query.style.background = '#333';
+query.style.color = '#fff';
+query.style.padding = '6px';
+query.style.textAlign="center";
+
+document.querySelector('li').style.color='red';
+document.querySelector('li:nth-child(2)').style.color='blue';
+document.querySelector('li:nth-child(5)').style.color='orange';
+document.querySelector('li').style.color='red';
+document.querySelector('.btn').style.color="white";
+document.querySelector('a:nth-child(1)').style.color="red";
+document.querySelector('li:nth-child(odd)').style.background='#ccc';
+document.querySelector('li:nth-child(even)').style.background='#f4f4f4';
+
+const collectionItem = document.querySelector('.collection-item');
+
+//console.log(query);
+
+
+//SELECTING MULTIPLE ELEMENTS 
+// const itemCollection = document.getElementsByClassName('collection-item');
+// const itemCollection = document.querySelector('ul').getElementsByClassName('collection-item');
+
+// itemCollection[1].style.background = '#000';
+// itemCollection[5].style.background = '#f4f4f4';
+
+//console.log(itemCollection);
+
+// const testCollection = document.querySelector('.collection-item-test');
+// testCollection.style.background = '#333';
+// testCollection.style.color="#fff";
+// testCollection.style.padding='10px';
+// testCollection.style.textAlign ="center";
+// testCollection.style.margin = '0 25px';
+
