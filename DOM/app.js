@@ -49,11 +49,32 @@ cardAction.replaceChild(newHeading,oldHeading);
 //console.log(newHeading);
 
 
-
-
-
 /* REMOVE ELEMENTS 
 -Todo list
 element.remove();
 element.removeChild(child[0]);
 ----------------*/
+const toRemove = document.querySelectorAll('li.collection-item');
+// for (let i = 0 ; i < toRemove.length; i++){
+//     toRemove[i].remove();
+// }
+// toRemove[2].remove();
+toRemove[1].remove();
+// toRemove[0].remove();
+//console.log(toRemove);
+
+/* Classes and attributes 
+----------------*/
+//classes
+const firstLi = document.querySelector('li:first-child');
+const tlink = firstLi.children[0];
+let val;
+val = link.className;
+val = link.classList;
+link.classList.add('newclass');
+link.classList.remove('newclass');
+val = link;
+
+//attributes
+console.log(val);
+
