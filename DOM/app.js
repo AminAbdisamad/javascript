@@ -76,5 +76,11 @@ link.classList.remove('newclass');
 val = link;
 
 //attributes
-console.log(val);
+val = link.getAttribute('href');
+val = link.setAttribute('href','asalsolutions.com');
+link.setAttribute('title','Asal Solutions');
+link.removeAttribute('title');
+val = link;
+
+//console.log(val);
 
