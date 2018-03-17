@@ -188,3 +188,7 @@ val = listItems.nextElementSibling.nextElementSibling;
 val = listItems.previousSibling;
 val = listItems.previousElementSibling;
 console.log(val);
+
+
+/* Creating Elements
+------------------*/
