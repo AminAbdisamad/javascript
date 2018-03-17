@@ -152,5 +152,15 @@ val = theListCol.childNodes[2].nodeName;
  --------------------*/
  val = theListCol.children;
  val = theListCol.children[3];
+ //theListCol.children[1].textContent ='text for test';
+
+ /* -------------------
+ Get children of children
+ --------------------*/
+ val = theListCol.children[1].children[0];
+ theListCol.children[1].children.id="new-link";
+ val = theListCol.children[1].children;
+val=theListCol.firstElementChild;
+
 
 console.log(val);
