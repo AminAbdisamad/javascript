@@ -34,8 +34,14 @@ scriptArr.forEach(function(script){
 
 
 //Selecting HTML Elements 
+/* getElementById*/
 let taskTitle = document.getElementById('task-title');
 taskTitle.style.background = '#eee';
 taskTitle.style.color = '#333';
 taskTitle.style.padding = '10px';
 //taskTitle.style.display = 'none';
+
+//changing content
+taskTitle.textContent = "Task List";
+taskTitle.innerText = "The Task List";
+taskTitle.innerHTML ="<span style='color:blue'>Task List</span>"
