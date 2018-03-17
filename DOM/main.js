@@ -27,7 +27,15 @@ let element = document.body;
 let scripts = document.scripts
 let scriptArr = Array.from(scripts);
 scriptArr.forEach(function(script){
-    console.log(script);
+    //console.log(script);
 });
 
-console.log(val);
+//console.log(val);
+
+
+//Selecting HTML Elements 
+let taskTitle = document.getElementById('task-title');
+taskTitle.style.background = '#eee';
+taskTitle.style.color = '#333';
+taskTitle.style.padding = '10px';
+//taskTitle.style.display = 'none';
