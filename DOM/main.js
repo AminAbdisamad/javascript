@@ -160,7 +160,29 @@ val = theListCol.childNodes[2].nodeName;
  val = theListCol.children[1].children[0];
  theListCol.children[1].children.id="new-link";
  val = theListCol.children[1].children;
-val=theListCol.firstElementChild;
+
+ //first child
+val = theListCol.firstChild;
+val = theListCol.firstElementChild;
+//last child
+val = theListCol.lastChild;
+val = theListCol.lastElementChild;
+//count child elements
+val = theListCol.childElementCount;
+
+/* Get Parent Elements
+------------------*/
+
+val = listItems.parentNode;
+val = listItems.parentElement;
+val = listItems.parentElement.parentElement;
+
+/* Get Next Sibling Elements
+------------------*/
+val = listItems.nextSibling;
+val = listItems.nextElementSibling;
+val = listItems.nextElementSibling.nextElementSibling;
+
 
 
 console.log(val);
