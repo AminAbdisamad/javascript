@@ -29,4 +29,31 @@ collection.appendChild(newListItem);
 //console.log(collection);
 
 /* REPLACE ELEMENTS 
+-Todo list
+----------------*/
+//1. create h2 element with an id of task-title
+const newHeading = document.createElement('h2');
+//add id
+newHeading.id = "task-title";
+//2.Give it a title of 'Task list' by createTextNode
+newHeading.appendChild(document.createTextNode('Task List'));
+//newHeading.textContent = "Task List";
+//3. store the old heading into a variable 
+const oldHeading = document.getElementById('task-title');
+//4. store the parent element into a variable
+const cardAction = document.querySelector('.card-action');
+//5.and replace it with new heading element
+cardAction.replaceChild(newHeading,oldHeading);
+
+
+//console.log(newHeading);
+
+
+
+
+
+/* REMOVE ELEMENTS 
+-Todo list
+element.remove();
+element.removeChild(child[0]);
 ----------------*/
