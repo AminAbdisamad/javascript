@@ -32,18 +32,18 @@ collection.appendChild(newListItem);
 -Todo list
 ----------------*/
 //1. create h2 element with an id of task-title
-const newHeading = document.createElement('h2');
-//add id
-newHeading.id = "task-title";
-//2.Give it a title of 'Task list' by createTextNode
-newHeading.appendChild(document.createTextNode('Task List'));
-//newHeading.textContent = "Task List";
-//3. store the old heading into a variable 
-const oldHeading = document.getElementById('task-title');
-//4. store the parent element into a variable
-const cardAction = document.querySelector('.card-action');
-//5.and replace it with new heading element
-cardAction.replaceChild(newHeading,oldHeading);
+// const newHeading = document.createElement('h2');
+// //add id
+// newHeading.id = "task-title";
+// //2.Give it a title of 'Task list' by createTextNode
+// newHeading.appendChild(document.createTextNode('Task List'));
+// //newHeading.textContent = "Task List";
+// //3. store the old heading into a variable 
+// const oldHeading = document.getElementById('task-title');
+// //4. store the parent element into a variable
+// const cardAction = document.querySelector('.card-action');
+// //5.and replace it with new heading element
+// cardAction.replaceChild(newHeading,oldHeading);
 
 
 //console.log(newHeading);
@@ -84,3 +84,42 @@ val = link;
 
 //console.log(val);
 
+/* Event Listeners
+----------------*/
+const clearTask = document.querySelector('.clear-tasks');
+// clearTask.addEventListener('click',e => console.log("Hello world"));
+// clearTask.addEventListener('click',function(e){
+//     console.log('Hello World');
+//     e.preventDefault()
+// });
+clearTask.addEventListener('click',onClick);
+
+function onClick(e){
+    val = e.target.classList;
+    val = e.target.className;
+    e.target.style.background = "white";
+    e.target.style.color = "orange";
+    e.target.textContent = "Hi Aminux";
+    val = e.target.style.background = "blue";
+
+
+    val = e.type;
+    val = e.timeStamp;
+    //coordinate  events from the window
+    val = e.clientX;
+    val = e.clientY;
+
+    //coordinate events relative elements 
+    val = e.offsetY;
+    val = e.offsetX;
+
+    //
+    console.log(val);
+    //e.preventDefault();
+    
+
+}
+
+/* Mouse Events */
+const heading = document.querySelector('h5');
+const card = document.querySelector('.card');
