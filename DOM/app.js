@@ -114,7 +114,7 @@ function onClick(e){
     val = e.offsetX;
 
     //
-    console.log(val);
+    //console.log(val);
     //e.preventDefault();
     
 
@@ -123,3 +123,20 @@ function onClick(e){
 /* Mouse Events */
 const heading = document.querySelector('h5');
 const card = document.querySelector('.card');
+
+//clearTask.addEventListener('click',event);
+clearTask.addEventListener('dblclick',event);
+//card.addEventListener('mouseenter', event);
+//card.addEventListener('mouseleave', event);
+//card.addEventListener('mousedown', event);
+//card.addEventListener('mouseup', event);
+//card.addEventListener('mouseover', event);
+//card.addEventListener('mouseout', event);
+card.addEventListener('mousemove', event);
+// mouse event function 
+function event(e){
+    //mouseenter - mousedown - mouse - 
+    val = e.type;
+    console.log(`Type of ${val}`);
+    //e.preventDefault();
+}
