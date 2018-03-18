@@ -121,11 +121,11 @@ function onClick(e){
 }
 
 /* Mouse Events */
-const heading = document.querySelector('h5');
+const heading = document.querySelector('#task-title');
 const card = document.querySelector('.card');
 
 //clearTask.addEventListener('click',event);
-clearTask.addEventListener('dblclick',event);
+//clearTask.addEventListener('dblclick',event);
 //card.addEventListener('mouseenter', event);
 //card.addEventListener('mouseleave', event);
 //card.addEventListener('mousedown', event);
@@ -136,7 +136,10 @@ card.addEventListener('mousemove', event);
 // mouse event function 
 function event(e){
     //mouseenter - mousedown - mouse - 
-    val = e.type;
-    console.log(`Type of ${val}`);
+    //val = e.type;
+    //offset display and background color
+    //heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+    //document.body.style.background=`rgb(${e.offsetX},${e.offsetY},40)`;
+    //console.log(`Type of ${val}`);
     //e.preventDefault();
 }
