@@ -11,7 +11,7 @@ newListItem.id = 'listItem';
 // set attribute
 newListItem.setAttribute('title','listItem');
 //display text on element
-newListItem.textContent = "Hello";
+//newListItem.textContent = "Not Hello";
 //create new element
 const link = document.createElement('a');
 //newListItem.innerHTML = 'Hello <a href="#" class="delete-item secondary-content"><i class="fa fa-remove"></i></a>';
@@ -67,25 +67,26 @@ toRemove[1].remove();
 ----------------*/
 //classes
 const firstLi = document.querySelector('li:first-child');
-const tlink = firstLi.children[0];
-let val;
-val = link.className;
-val = link.classList;
-link.classList.add('newclass');
-link.classList.remove('newclass');
-val = link;
+// const tlink = firstLi.children[0];
+// let val;
+// val = link.className;
+// val = link.classList;
+// link.classList.add('newclass');
+// link.classList.remove('newclass');
+// val = link;
 
 //attributes
-val = link.getAttribute('href');
-val = link.setAttribute('href','asalsolutions.com');
-link.setAttribute('title','Asal Solutions');
-link.removeAttribute('title');
-val = link;
+// val = link.getAttribute('href');
+// val = link.setAttribute('href','asalsolutions.com');
+// link.setAttribute('title','Asal Solutions');
+// link.removeAttribute('title');
+// val = link;
 
 //console.log(val);
 
 /* Event Listeners
 ----------------*/
+let val;
 const clearTask = document.querySelector('.clear-tasks');
 // clearTask.addEventListener('click',e => console.log("Hello world"));
 // clearTask.addEventListener('click',function(e){
@@ -142,4 +143,72 @@ function event(e){
     //document.body.style.background=`rgb(${e.offsetX},${e.offsetY},40)`;
     //console.log(`Type of ${val}`);
     //e.preventDefault();
+};
+
+/* Keyboard events
+-----------------
+1. get input value 
+2. get form submit event
+*/
+
+//task-form
+//task
+const form = document.querySelector('form');
+//const addTask = document.getElementById('task');
+const addTask = document.querySelector('#task');
+
+
+//card.addEventListener('mousemove', event);
+form.addEventListener("submit", taskAdd);
+//addTask.addEventListener('keydown',taskAdd);
+// addTask.addEventListener('keyup',taskAdd);
+//addTask.addEventListener('keypress',taskAdd);
+//addTask.addEventListener('focus',taskAdd);
+// addTask.addEventListener('blur',taskAdd);
+// addTask.addEventListener('cut',taskAdd);
+// addTask.addEventListener('past',taskAdd);
+// addTask.addEventListener('past',taskAdd);
+const select = document.querySelector('select');
+//select.addEventListener('change',taskAdd);
+function taskAdd(e){
+    console.log(`Type of : ${e.type}`);
+    console.log(e.target.value);
+    e.preventDefault();
+    //val = addTask.value;
+    //addTask.value = "";
+    //createItemList();
+    // heading.innerHTML = e.target.value;
 }
+//Create Element function
+function createItemList(){
+//create the list element
+const oldUl = document.querySelector('ul.collection');
+const listElement = document.createElement('li');
+const links = document.createElement('a');
+//collection-item
+listElement.className ='collection-item';
+links.className ='delete-item secondary-content';
+links.innerHTML = '<i class="fa fa-remove"></i>';
+listElement.appendChild(links);
+oldUl.appendChild(listElement);
+listElement.textContent = addTask.value;
+//listElement.innerHTML = addTask.value;
+
+
+// console.log(oldUl);
+console.log(listElement);
+}
+//createItemList();
+
+//remove list - to be completed
+// const getLinkClass = document.querySelector('.delete-item');
+// getLinkClass.addEventListener('click',theRemoveItem);
+// function theRemoveItem(e){
+//     console.log('clicked');
+//     e.preventDefault();
+// }
+// function removeList(){
+//     for (let i = 0 ; i < toRemove.length; i++){
+//      toRemove[i].remove();
+//  }
+// }
