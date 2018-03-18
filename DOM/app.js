@@ -212,3 +212,17 @@ console.log(listElement);
 //      toRemove[i].remove();
 //  }
 // }
+
+document.body.addEventListener('click',deleteItem)
+function deleteItem(e){
+    //console.log(e.target.className);
+// if(e.target.className === "fa fa-remove"){
+//     //e.target.remove();
+//     console.log('deleted Item');
+// }
+// instead of using className === "delete-item secondary-content" its better to use .classlist.contains('delete-Item');
+if(e.target.parentElement.classList.contains('delete-item')){
+    e.target.parentElement.parentElement.remove();
+    console.log('deleted Item');
+}
+}
