@@ -213,6 +213,30 @@ console.log(listElement);
 //  }
 // }
 
+
+// Event bubling
+document.querySelector('.card-title').addEventListener('click',function (){
+    //console.log('Card Title');
+});
+document.querySelector('.card-content').addEventListener('click',function (){
+    //console.log('Card content');
+});
+document.querySelector('.card').addEventListener('click',function (){
+    //console.log('Card');
+});
+document.querySelector('.col').addEventListener('click',function (){
+    //console.log('col');
+});
+
+
+
+// Event Deligation  - putting event on target and going down 
+
+const deleteItems = document.querySelector('.delete-item');
+deleteItems.addEventListener('click',delItem)
+function delItem(){
+    //console.log('delete Item');
+}
 document.body.addEventListener('click',deleteItem)
 function deleteItem(e){
     //console.log(e.target.className);
@@ -226,22 +250,3 @@ if(e.target.parentElement.classList.contains('delete-item')){
     console.log('deleted Item');
 }
 }
-
-// Event bubling
-document.querySelector('.card-title').addEventListener('click',function (){
-    console.log('Card Title');
-});
-document.querySelector('.card-content').addEventListener('click',function (){
-    console.log('Card content');
-});
-document.querySelector('.card').addEventListener('click',function (){
-    console.log('Card');
-});
-document.querySelector('.col').addEventListener('click',function (){
-    console.log('col');
-});
- 
- 
-
-// Event Deligation  - putting event on target and going down 
-
