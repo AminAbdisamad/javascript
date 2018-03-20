@@ -250,3 +250,9 @@ if(e.target.parentElement.classList.contains('delete-item')){
     console.log('deleted Item');
 }
 }
+
+
+/* Local and Session storage */
+//its part of the browser if you write window in the console you can find it.
+
+// different btw local  and session storage is that local storage stays until you clear it out while session storage goes out whenever you close your browser 
