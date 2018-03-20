@@ -256,3 +256,16 @@ if(e.target.parentElement.classList.contains('delete-item')){
 //its part of the browser if you write window in the console you can find it.
 
 // different btw local  and session storage is that local storage stays until you clear it out while session storage goes out whenever you close your browser 
+
+//setting up local storage
+sessionStorage.setItem('name','Amin');
+//setting up local storage
+localStorage.setItem('name','Aminux');
+// remove items from local storage
+//localStorage.removeItem('name');
+// get from storage
+const name = localStorage.getItem('name');
+console.log(name);
+
+
+
