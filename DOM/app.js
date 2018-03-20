@@ -226,3 +226,4 @@ if(e.target.parentElement.classList.contains('delete-item')){
     console.log('deleted Item');
 }
 }
+
