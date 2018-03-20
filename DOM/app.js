@@ -261,11 +261,23 @@ if(e.target.parentElement.classList.contains('delete-item')){
 sessionStorage.setItem('name','Amin');
 //setting up local storage
 localStorage.setItem('name','Aminux');
+localStorage.setItem('age',27);
+localStorage.setItem('name','Halimux');
+localStorage.setItem('age',30);
 // remove items from local storage
 //localStorage.removeItem('name');
 // get from storage
 const name = localStorage.getItem('name');
-console.log(name);
+const age = localStorage.getItem('age');
+localStorage.clear();
+console.log(name,age);
+document.querySelector('#task-form').addEventListener('submit',function (e){
+    const task = document.querySelector('#task').value;
+    localStorage.setItem('tasks',task);
+    alert('Task Saved');
+
+    e.preventDefault();
+});
 
 
 
