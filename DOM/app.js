@@ -227,3 +227,20 @@ if(e.target.parentElement.classList.contains('delete-item')){
 }
 }
 
+// Event bubling
+document.querySelector('.card-title').addEventListener('click',function (){
+    console.log('Card Title');
+});
+document.querySelector('.card-content').addEventListener('click',function (){
+    console.log('Card content');
+});
+document.querySelector('.card').addEventListener('click',function (){
+    console.log('Card');
+});
+document.querySelector('.col').addEventListener('click',function (){
+    console.log('col');
+});
+ 
+ 
+
+// Event Deligation 
