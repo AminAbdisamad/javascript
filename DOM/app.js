@@ -243,4 +243,5 @@ document.querySelector('.col').addEventListener('click',function (){
  
  
 
-// Event Deligation 
+// Event Deligation  - putting event on target and going down 
+
