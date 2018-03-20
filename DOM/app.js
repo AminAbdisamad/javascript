@@ -260,20 +260,28 @@ if(e.target.parentElement.classList.contains('delete-item')){
 //setting up local storage
 sessionStorage.setItem('name','Amin');
 //setting up local storage
-localStorage.setItem('name','Aminux');
-localStorage.setItem('age',27);
-localStorage.setItem('name','Halimux');
-localStorage.setItem('age',30);
+// localStorage.setItem('name','Aminux');
+// localStorage.setItem('age',27);
+// localStorage.setItem('name','Halimux');
+// localStorage.setItem('age',30);
 // remove items from local storage
 //localStorage.removeItem('name');
 // get from storage
-const name = localStorage.getItem('name');
-const age = localStorage.getItem('age');
-localStorage.clear();
-console.log(name,age);
+// const name = localStorage.getItem('name');
+// const age = localStorage.getItem('age');
+// localStorage.clear();
+// console.log(name,age);
 document.querySelector('#task-form').addEventListener('submit',function (e){
     const task = document.querySelector('#task').value;
-    localStorage.setItem('tasks',task);
+    let tasks;
+    if(localStorage.getItem('tasks') === null){
+        tasks = [];
+
+    }else{
+        tasks = JSON.parse(localStorage.getItem('tasks')); 
+    }
+    tasks.push(task);
+    localStorage.setItem('tasks',JSON.stringify(tasks));
     alert('Task Saved');
 
     e.preventDefault();
