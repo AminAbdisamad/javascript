@@ -1,0 +1,24 @@
+{
+    "people" : [
+        {
+            "name" : "Amin",
+            "age" : 30
+        },
+        {
+            "name" : "Omar",
+            "age" : 20
+        },
+        {
+            "name" : "Ali",
+            "age" : 40
+        },
+        {
+            "name" : "Hussein",
+            "age" : 44
+        },
+        {
+            "name" : "Halima",
+            "age" : 45
+        }
+    ]
+}

@@ -286,6 +286,10 @@ document.querySelector('#task-form').addEventListener('submit',function (e){
 
     e.preventDefault();
 });
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+tasks.forEach(function(task,index){
+    console.log(`${index} : ${task}`);
+});
 
 
 

@@ -1,0 +1,17 @@
+.btn-smaller {
+    margin:0 4px 4px 0px;
+    height: 33px;
+    width:33px;
+    padding-top: 0;
+    padding-bottom: 10px;
+
+    
+}
+
+
+.date {
+    font-size: 10px;
+    display: block;
+    padding: 0 4px;
+    color:rgb(92, 86, 86);
+}
