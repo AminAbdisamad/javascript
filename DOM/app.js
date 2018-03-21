@@ -273,16 +273,16 @@ sessionStorage.setItem('name','Amin');
 // console.log(name,age);
 document.querySelector('#task-form').addEventListener('submit',function (e){
     const task = document.querySelector('#task').value;
-    let tasks;
-    if(localStorage.getItem('tasks') === null){
-        tasks = [];
+    // let tasks;
+    // if(localStorage.getItem('tasks') === null){
+    //     tasks = [];
 
-    }else{
-        tasks = JSON.parse(localStorage.getItem('tasks')); 
-    }
-    tasks.push(task);
-    localStorage.setItem('tasks',JSON.stringify(tasks));
-    alert('Task Saved');
+    // }else{
+    //     tasks = JSON.parse(localStorage.getItem('tasks')); 
+    // }
+    // tasks.push(task);
+    // localStorage.setItem('tasks',JSON.stringify(tasks));
+    // alert('Task Saved');
 
     e.preventDefault();
 });
