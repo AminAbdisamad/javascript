@@ -10,9 +10,10 @@ const totalPayment = document.getElementById('total-payment');
 const totalInterest = document.getElementById('total-interest');
 form.addEventListener('submit',function(e){
     //hide results and show the loader
-    results.style.display = 'none';
-    loader.style.display = 'block';
-    setTimeout(calculate,2000);
+        results.style.display = 'none';
+        loader.style.display = 'block';
+        setTimeout(calculate,2000); 
+        
     e.preventDefault();
 });
 function calculate(){
@@ -45,7 +46,6 @@ function showError(error){
     errorMessage.className = 'alert alert-danger';
     errorMessage.appendChild(document.createTextNode(error));
     card.insertBefore(errorMessage,heading);
-    //clear message  after 3s
-    setTimeout(() => errorMessage.remove(),3000);
+    //clear message  after 4s
+    setTimeout(() => errorMessage.remove(),4000);
 }
-
