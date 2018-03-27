@@ -13,7 +13,7 @@ function Books(title,author,isbn){
 //constructor for UI
 function UI(){}
 //create prototype
-Books.prototype.createTable = function(){
+UI.prototype.createTable = function(){
     const tBody = document.querySelector('.book-list'),
           tr = document.createElement('tr');
     tBody.appendChild(tr);
@@ -26,19 +26,18 @@ Books.prototype.createTable = function(){
 }
 //event listener
 form.addEventListener('submit',addBooks);
-
-
 function addBooks(e){
     //initiate object from Books constructor
     const books = new Books(bookTitle.value, author.value,isbn.value);
     //initiate object from UI constructor
     const ui = new UI();
+    console.log(ui);
     if(bookTitle.value =='' || author.value == '' || isbn.value == ''){
         //alert("Failed");
         ui.showAlerts('Empty fields are not allowed, fill in the form before you submit','red','white-text');
     }else{
         //add books
-        books.createTable();
+        ui.createTable();
         // show alert
         ui.showAlerts('You have successfully Added ','green','white-text');
         // clear fields 
