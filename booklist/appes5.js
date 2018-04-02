@@ -1,4 +1,5 @@
 //global variables
+// add LS
 const bookTitle = document.getElementById('book_title'),
       author = document.getElementById('author'),
       isbn = document.getElementById('isbn'),

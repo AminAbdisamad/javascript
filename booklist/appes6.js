@@ -1,3 +1,5 @@
+// TODO :- Update book to be added
+
 //Global variables
 const bookTitle = document.getElementById('book_title'),
       author = document.getElementById('author'),
@@ -22,7 +24,19 @@ class UI{
         `<td>${book.bookTitle}</td> 
         <td>${book.author}</td>
         <td>${book.isbn}</td>
-        <td><a class="btn-floating red delete"><i class="tiny material-icons">delete</i></a></td>`;
+        <td><a  title="Delete" class="btn-floating red delete"><i class="material-icons">delete</i></a>
+        <a title="Edit" class="btn-floating red edit"><i class="material-icons">edit</i></a></td>
+        `;
+    }
+    editBook(target){
+        //getting data from table fields 
+        bookTitle.value = target.children[0].innerHTML;
+        author.value = target.children[1].innerHTML;
+        isbn.value = target.children[2].innerHTML;
+       //console.log(target.children[0].innerHTML);
+       const btn = document.getElementById('add_edit');
+       btn.innerHTML = `<i class="material-icons">edit</i>`;
+       btn.value = "edit";
     }
     clearFields(){
         bookTitle.value = '';
@@ -115,5 +129,17 @@ document.addEventListener('click',function(e){
     }
     //delete from local storage
     StoreInLS.removeFromLS(e.target.parentElement.classList.contains('delete'));
+})
 
+//edit book
+document.addEventListener('click',function(e){
+    const ui = new UI();
+    if(e.target.parentElement.classList.contains('edit')){
+            // call edit
+            ui.editBook(e.target.parentElement.parentElement.parentElement);
+
+        //ui.showAlerts(`You have successfully Edited` ,'green','white-text');
+    }
+    //delete from local storage
+    //StoreInLS.update(e.target.parentElement.classList.contains('delete'));
 })

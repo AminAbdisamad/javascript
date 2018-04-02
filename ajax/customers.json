@@ -1,0 +1,29 @@
+[
+    {
+    "id":1,
+    "name":"Mohamed Amin Abdisamd",
+    "Company":"LoopySec",
+    "Telephone":"553223821",
+    "University": "Masters Degree"
+},
+{
+    "id":2,
+    "name":"Hassan Amin Abdisamd",
+    "Company":"Asal Solutions",
+    "Telephone":"553223821",
+    "University": "pHD"
+},
+{
+    "id":3,
+    "name":"Abdihalim Adam",
+    "Company":"LoopySec",
+    "Telephone":"553223821",
+    "University": "Post-graduate"
+},{
+    "id":4,
+    "name":"Ibrahim Mohamed ",
+    "Company":"SomaliCERT",
+    "Telephone":"553223821",
+    "University": "Degree on Information security"
+}
+]
