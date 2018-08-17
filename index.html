@@ -1,81 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JSON Course</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Callbacks</title>
 </head>
+
 <body>
-    <div class="container">
-        <ul id="collection">
-            <!-- Display list of people here -->
-        </ul>
-    </div>
 
-<script>/*
-    let person = {
-        name: "Aminux",
-        age : 30,
-        address: {
-            street : "30 Street Blacksea Mogadishu",
-            city : "Mogadishu"
-        },
-        email : function(){
-            email1: "amiin@asalsolutions.com"
-            //email2: "amiin@asalsolutions.com"
-        }
-    }
 
-    let people = [
-        {
-            name : "Amin",
-            age : 30
-        },
-        {
-            name : "Omar",
-            age : 20
-        },
-        {
-            name : "Ali",
-            age : 40
-        },
-        {
-            name : "Hussein",
-            age : 44
-        }
-    ];
-    //person = JSON.stringify(person);
-    //person = JSON.parse(person);
-    //console.log(person);
-    //console.log(people[3].age);
-
-    //loop through the array and display it on the the screen
-    const uls = document.querySelector('ul#collection');
-    let output;
-  for(let i = 0; i <people.length; i++){
-    output += `<li>${people[i].name} </li>`;
-  }
-  uls.innerHTML = output;*/
-
-  //Ajax 
-  const xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            let response = JSON.parse(xhttp.responseText);
-            let people = response.people;
-
-            let output = '';
-            for(let i = 0;i < people.length;i++){
-              output += '<li>'+people[i].name+'</li>';
-            }
-            document.getElementById('collection').innerHTML = output;
-          }
-      };
-      xhttp.open("GET", "app.json", true);
-      xhttp.send();
-</script>    
-<script src="app.json" type="application/json"></script>
-<script src="app.js"></script>
 </body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+<script src="app.js"></script>
+
 </html>
